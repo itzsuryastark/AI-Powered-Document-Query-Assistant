@@ -1,0 +1,64 @@
+.card {
+    background: linear-gradient(135deg, #ffffff, #f9f9f9);
+    color: var(--text-color);
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: var(--box-shadow);
+    max-width: 600px;
+    margin: 2rem auto;
+    text-align: center;
+    transition: 0.3s;
+  }
+  
+  .card:hover {
+    box-shadow: var(--box-shadow-hover);
+  }
+  
+  .file-input,
+  .textarea {
+    width: 100%;
+    padding: 0.8rem;
+    margin: 1rem 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1rem;
+  }
+  
+  .button {
+    background: var(--button-bg);
+    color: var(--button-text);
+    border: none;
+    padding: 0.8rem 1.5rem;
+    font-size: 1rem;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background 0.3s ease;
+  }
+  
+  .button:hover {
+    background: var(--button-hover);
+  }
+  
+  .response {
+    margin-top: 1rem;
+    background: rgba(0, 0, 0, 0.05);
+    padding: 1rem;
+    border-radius: 5px;
+    max-height: 300px;
+    overflow-y: auto;
+  }
+  
+  .scrollable-text {
+    white-space: pre-wrap;
+    word-wrap: break-word;
+  }
+  
+  [data-theme="dark"] .card {
+    background: linear-gradient(135deg, #2c2c2c, #1e1e1e);
+    color: #f5f5f5;
+  }
+  
+  [data-theme="dark"] .response {
+    background: rgba(255, 255, 255, 0.1);
+  }
+  
