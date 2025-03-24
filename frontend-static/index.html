@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Smart Document Assistant</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <h1>Smart Document Assistant</h1>
+    
+    <!-- Upload Document Section -->
+    <section id="upload-section">
+      <h2>Upload Document</h2>
+      <input type="file" id="fileInput" />
+      <button id="uploadButton">Upload</button>
+      <textarea id="extractedText" placeholder="Extracted text will appear here..." readonly></textarea>
+    </section>
+
+    <!-- Query Document Section -->
+    <section id="query-section">
+      <h2>Query Document</h2>
+      <textarea id="documentInput" placeholder="Paste document text here..."></textarea>
+      <input type="text" id="queryInput" placeholder="Enter your query..." />
+      <button id="queryButton">Query</button>
+      <p id="queryResult">Answer: <span></span></p>
+    </section>
+
+    <!-- Summarize Text Section -->
+    <section id="summary-section">
+      <h2>Summarize Text</h2>
+      <textarea id="textInput" placeholder="Paste text here..."></textarea>
+      <button id="summarizeButton">Summarize</button>
+      <textarea id="summaryResult" placeholder="Summary will appear here..." readonly></textarea>
+    </section>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

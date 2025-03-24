@@ -16,14 +16,7 @@ CORS(app)
 def summarize():
     data = request.json
     text = data.get('text', '')
-
-    # Call the generate_summary function
     summary = generate_summary(text)
-
-    # Check for incomplete responses
-    if summary.endswith("...") or summary[-1].isdigit():
-        return jsonify({'error': 'The response seems incomplete. Please try again with more context.'}), 400
-
     return jsonify({'summary': summary})
 
 @app.route('/')
