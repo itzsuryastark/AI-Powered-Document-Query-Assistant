@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import Spinner from "./LoadingSpinner";
 import "../styles/components.css";
 
 function UploadDocument({ onFileUpload }) {
@@ -9,7 +10,7 @@ function UploadDocument({ onFileUpload }) {
   const handleFileChange = (event) => {
     const selectedFile = event.target.files[0];
     setFile(selectedFile);
-    onFileUpload(selectedFile); // Pass file to parent (App.jsx)
+    onFileUpload(selectedFile);
   };
 
   const handleUpload = async () => {
@@ -41,7 +42,7 @@ function UploadDocument({ onFileUpload }) {
       <h2>Upload & Summarize Document</h2>
       <input type="file" onChange={handleFileChange} className="file-input" />
       <button className="button" onClick={handleUpload} disabled={loading}>
-        {loading ? "Uploading..." : "Upload"}
+        {loading ? <Spinner /> : "Upload"}
       </button>
       {uploadResponse && (
         <div className="response">

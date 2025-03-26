@@ -2,16 +2,15 @@ import React, { useState, useEffect } from "react";
 import "../styles/theme.css";
 
 const ThemeToggle = () => {
-  const [theme, setTheme] = useState(localStorage.getItem("theme") || "light");
-
-  useEffect(() => {
-    document.documentElement.setAttribute("data-theme", theme);
-    localStorage.setItem("theme", theme);
-  }, [theme]);
+  const toggleTheme = () => {
+    const currentTheme = document.documentElement.getAttribute("data-theme");
+    const newTheme = currentTheme === "dark" ? "light" : "dark";
+    document.documentElement.setAttribute("data-theme", newTheme);
+  };
 
   return (
-    <button className="theme-toggle" onClick={() => setTheme(theme === "light" ? "dark" : "light")}>
-      {theme === "light" ? "🌙 Dark Mode" : "☀️ Light Mode"}
+    <button className="theme-toggle" onClick={toggleTheme}>
+      Toggle Theme
     </button>
   );
 };

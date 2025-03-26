@@ -7,7 +7,6 @@ import "./styles/global.css";
 const App = () => {
   const [uploadedFile, setUploadedFile] = useState(null);
 
-  // Function to handle file upload and store it in state
   const handleFileUpload = (file) => {
     setUploadedFile(file);
   };
